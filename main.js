@@ -1,3 +1,5 @@
+let lightMode=false;
+
 function Time()
 {
     let deg = 6;
@@ -12,12 +14,13 @@ function Time()
 setInterval(Time,1000)    
 
 function light_mode() {
-    document.getElementById("hour").style.background = "black";
+    document.getElementById("hour").style.background = lightMode?"black":"wheat";
     document.getElementById("minute").style.background = "black";
     document.getElementById("center").style.background = "black";
     document.getElementById("second").style.background = "red";
     document.getElementById("clock").style.background = "white";
     document.getElementById("body").style.background = "#dee2e6";
+    lightMode=!lightMode;
 }
 function Dark_mode()
 {
